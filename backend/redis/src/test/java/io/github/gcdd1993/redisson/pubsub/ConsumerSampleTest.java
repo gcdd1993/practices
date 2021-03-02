@@ -1,5 +1,7 @@
 package io.github.gcdd1993.redisson.pubsub;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.Timer;
 
 /**
@@ -7,9 +9,10 @@ import java.util.Timer;
  * @date 2021/3/2
  * @since 1.0.0
  */
-public class TestMain {
+class ConsumerSampleTest {
 
-    public static void main(String[] args) throws InterruptedException {
+    @Test
+    public void test01() throws InterruptedException {
         var consumer1 = new Thread(new ConsumerSample());
         consumer1.setName("thread-1");
         consumer1.start();
