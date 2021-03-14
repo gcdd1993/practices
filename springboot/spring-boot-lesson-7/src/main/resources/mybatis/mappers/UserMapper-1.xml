@@ -16,6 +16,6 @@
     </resultMap>
 
     <select id="selectOneUser" parameterType="int" resultMap="UserResultMap" resultType="">
-        SELECT id,name,age,`desc`,height FROM user WHERE id = #{id}
+        SELECT id,name,age,`desc`,height FROM user1 WHERE id = #{id}
     </select>
 </mapper>
