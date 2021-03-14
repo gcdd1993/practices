@@ -27,9 +27,10 @@ public class CustomerService {
      */
     @Transactional
     public void addCustomer(Customer customer) {
-
+        entityManager.persist(customer.getCreditCard());
+        customer.getBooks().forEach(entityManager::persist);
+        entityManager.persist(customer.getStore());
         entityManager.persist(customer);
-
     }
 
     public Customer getCustomerById(Long id) {
