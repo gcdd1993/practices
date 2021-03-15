@@ -7,7 +7,7 @@ package io.github.gcdd1993.chapter4;
  */
 public class BinarySearchTree<T extends Comparable<? super T>> {
 
-    private BinaryNode<T> root;
+    private BinaryTreeNode<T> root;
 
     public BinarySearchTree() {
         root = null;
@@ -62,7 +62,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
      * @param t 子树的根节点
      * @return 如果能找到
      */
-    private boolean contains(T x, BinaryNode<T> t) {
+    private boolean contains(T x, BinaryTreeNode<T> t) {
         // 如果t是空集，表明已经查找到叶子节点，仍未找到，返回false
         if (t == null) {
             return false;
@@ -91,7 +91,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
      * @param t 子树根节点
      * @return min element
      */
-    private BinaryNode<T> findMin(BinaryNode<T> t) {
+    private BinaryTreeNode<T> findMin(BinaryTreeNode<T> t) {
         if (t == null) {
             return null;
         } else if (t.left == null) {
@@ -108,7 +108,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
      * @param t 子树根节点
      * @return max element
      */
-    private BinaryNode<T> findMax(BinaryNode<T> t) {
+    private BinaryTreeNode<T> findMax(BinaryTreeNode<T> t) {
         if (t != null) {
             while (t.right != null) {
                 t = t.right;
@@ -128,9 +128,9 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
      * @param x 要查找的元素X
      * @param t 子树的根节点
      */
-    private BinaryNode<T> insert(T x, BinaryNode<T> t) {
+    private BinaryTreeNode<T> insert(T x, BinaryTreeNode<T> t) {
         if (t == null) {
-            return new BinaryNode<>(x);
+            return new BinaryTreeNode<>(x);
         }
         // 直接与子树的根节点比较，由于是二叉查找树，与根节点比较，将得出在左子树还是右子树。
         int compareResult = x.compareTo(t.element);
@@ -158,7 +158,7 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
      * @param t 节点
      * @return 被删除的节点
      */
-    private BinaryNode<T> remove(T x, BinaryNode<T> t) {
+    private BinaryTreeNode<T> remove(T x, BinaryTreeNode<T> t) {
         if (t == null) {
             return null; // 没找到，不删除
         }
@@ -184,20 +184,20 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
     /**
      * 二叉查找树节点
      */
-    private static class BinaryNode<T> {
+    private static class BinaryTreeNode<T> {
 
         // 需要实现Comparable接口
         private T element;
-        private BinaryNode<T> left;
-        private BinaryNode<T> right;
+        private BinaryTreeNode<T> left;
+        private BinaryTreeNode<T> right;
 
-        public BinaryNode(T element, BinaryNode<T> left, BinaryNode<T> right) {
+        public BinaryTreeNode(T element, BinaryTreeNode<T> left, BinaryTreeNode<T> right) {
             this.element = element;
             this.left = left;
             this.right = right;
         }
 
-        public BinaryNode(T element) {
+        public BinaryTreeNode(T element) {
             this.element = element;
         }
 
@@ -209,19 +209,19 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
             this.element = element;
         }
 
-        public BinaryNode<T> getLeft() {
+        public BinaryTreeNode<T> getLeft() {
             return left;
         }
 
-        public void setLeft(BinaryNode<T> left) {
+        public void setLeft(BinaryTreeNode<T> left) {
             this.left = left;
         }
 
-        public BinaryNode<T> getRight() {
+        public BinaryTreeNode<T> getRight() {
             return right;
         }
 
-        public void setRight(BinaryNode<T> right) {
+        public void setRight(BinaryTreeNode<T> right) {
             this.right = right;
         }
     }
