@@ -1,6 +1,5 @@
 package com.segmentfault.springbootlesson11.serializer;
 
-import com.segmentfault.springbootlesson11.domain.User;
 import org.apache.kafka.common.serialization.Serializer;
 
 import java.io.ByteArrayOutputStream;
