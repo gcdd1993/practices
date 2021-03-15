@@ -51,8 +51,26 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         root = remove(x, root);
     }
 
+    /**
+     * 因为二叉查找树中对信息进行的排序，因而按照顺序列出所有的项很简单
+     */
     public void printTree() {
+        if (isEmpty()) {
+            System.out.println("Empty tree!");
+        } else {
+            printTree(root);
+        }
+    }
 
+    /**
+     * 二叉树的遍历
+     */
+    private void printTree(BinaryTreeNode<T> t) {
+        if (t != null) {
+            printTree(t.left);
+            System.out.println(t.element);
+            printTree(t.right);
+        }
     }
 
     /**

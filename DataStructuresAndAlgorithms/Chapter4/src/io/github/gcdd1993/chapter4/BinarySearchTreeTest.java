@@ -15,13 +15,13 @@ public class BinarySearchTreeTest {
         tree.insert(10);
 
         tree.printTree();
-
-        System.out.println(tree.contains(10));
-        System.out.println(tree.contains(11));
-        System.out.println(tree.findMax());
-        System.out.println(tree.findMin());
+//
+//        System.out.println(tree.contains(10));
+//        System.out.println(tree.contains(11));
+//        System.out.println(tree.findMax());
+//        System.out.println(tree.findMin());
 
         tree.remove(10);
-        System.out.println(tree.contains(10));
+//        System.out.println(tree.contains(10));
     }
 }
