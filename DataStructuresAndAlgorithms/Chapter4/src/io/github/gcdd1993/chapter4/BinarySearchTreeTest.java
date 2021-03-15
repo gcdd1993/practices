@@ -6,13 +6,22 @@ package io.github.gcdd1993.chapter4;
 public class BinarySearchTreeTest {
 
     public static void main(String[] args) {
-        BinarySearchTree<String> tree = new BinarySearchTree<>();
-        tree.insert("节点1");
-        tree.insert("节点2");
-        tree.insert("节点3");
-        tree.insert("节点4");
-        tree.insert("节点5");
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+        tree.insert(100);
+        tree.insert(101);
+        tree.insert(102);
+        tree.insert(103);
+        tree.insert(104);
+        tree.insert(10);
 
         tree.printTree();
+
+        System.out.println(tree.contains(10));
+        System.out.println(tree.contains(11));
+        System.out.println(tree.findMax());
+        System.out.println(tree.findMin());
+
+        tree.remove(10);
+        System.out.println(tree.contains(10));
     }
 }

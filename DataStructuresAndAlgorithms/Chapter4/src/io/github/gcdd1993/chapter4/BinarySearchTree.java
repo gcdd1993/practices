@@ -43,12 +43,12 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 
     // 需要处理重复元
     public void insert(T x) {
-        insert(x, root);
+        root = insert(x, root);
     }
 
     // 删除通常来说，是最困难的
     public void remove(T x) {
-        remove(x, root);
+        root = remove(x, root);
     }
 
     public void printTree() {
