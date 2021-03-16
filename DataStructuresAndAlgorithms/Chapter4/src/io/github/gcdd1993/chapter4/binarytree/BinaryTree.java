@@ -1,4 +1,4 @@
-package io.github.gcdd1993.chapter4;
+package io.github.gcdd1993.chapter4.binarytree;
 
 import jdk.nashorn.internal.ir.BinaryNode;
 

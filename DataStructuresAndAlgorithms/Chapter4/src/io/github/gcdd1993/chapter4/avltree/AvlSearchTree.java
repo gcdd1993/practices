@@ -1,4 +1,4 @@
-package io.github.gcdd1993.chapter4;
+package io.github.gcdd1993.chapter4.avltree;
 
 /**
  * AVL树（带有平衡条件的二叉查找树），每个节点左右子树的深度差不超过1

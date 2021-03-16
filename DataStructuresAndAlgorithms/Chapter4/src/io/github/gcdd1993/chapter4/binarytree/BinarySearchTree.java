@@ -1,4 +1,4 @@
-package io.github.gcdd1993.chapter4;
+package io.github.gcdd1993.chapter4.binarytree;
 
 /**
  * 二叉查找树 ADT

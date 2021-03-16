@@ -1,4 +1,4 @@
-package io.github.gcdd1993.chapter4;
+package io.github.gcdd1993.chapter4.binarytree;
 
 /**
  * Created by gcdd1993 on 2021/3/15.
