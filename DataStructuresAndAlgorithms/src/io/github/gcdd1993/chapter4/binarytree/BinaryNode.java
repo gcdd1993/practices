@@ -1,11 +1,9 @@
 package io.github.gcdd1993.chapter4.binarytree;
 
-import jdk.nashorn.internal.ir.BinaryNode;
-
 /**
- * Created by gcdd1993 on 2021/3/15.
+ * Created by gcdd1993 on 2021/4/2.
  */
-public class BinaryTree {
+public class BinaryNode {
     private Object element;
     private BinaryNode left;
     private BinaryNode right;
