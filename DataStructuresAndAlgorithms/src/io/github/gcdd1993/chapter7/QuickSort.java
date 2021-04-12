@@ -13,12 +13,14 @@ public class QuickSort {
     }
 
     private static <T extends Comparable<? super T>> void quickSort(T[] arr, int left, int right) {
-        if (right - left <= 1) {
+        if (right - left <= 2) {
             return;
         }
 //        if (left + CUTOFF <= right) {
         T pivot = median3(arr, left, right);
         System.out.println("pivot: " + pivot);
+
+        // begin partitioning
         int i = left, j = right - 1;
         for (; ; ) {
             while (arr[++i].compareTo(pivot) < 0) {
